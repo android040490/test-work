@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+
+$font1: 'Open Sans', sans-serif;
+$font-size: 16px;
+$link-size: 12px;
+$font-color: #4c4c4c;
+
+@mixin font-style( $font-size, $color, $font-family: $font1,
+ $font-weight: 400, $text-transform: none){
+    font: {
+        size: $font-size;
+        weight: $font-weight;
+        family: $font-family;
+    }
+    color: $color;
+    text-transform: $text-transform;
+
+}
+
+html, body{
+    font-family: $font1;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $font-color;
+}
+a{
+    @include font-style( $link-size, $font-color, $font-family: $font1, $font-weight: 400 );
+    text-decoration: none;
+}
+label{
+    @include font-style( $link-size, $font-color, $font-family: $font1, $font-weight: 800);
+}
+
+h2{
+    @include font-style( 2rem, $font-color, $font-weight: 400, $text-transform: uppercase); 
+}
+h3{
+    @include font-style( 1.5rem, #000, $font-weight: 400); 
+}
