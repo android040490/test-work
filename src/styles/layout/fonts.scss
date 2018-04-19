@@ -4,6 +4,7 @@ $font1: 'Open Sans', sans-serif;
 $font-size: 16px;
 $link-size: 12px;
 $font-color: #4c4c4c;
+$font-color1: #000;
 
 @mixin font-style( $font-size, $color, $font-family: $font1,
  $font-weight: 400, $text-transform: none){
@@ -35,5 +36,5 @@ h2{
     @include font-style( 2rem, $font-color, $font-weight: 400, $text-transform: uppercase); 
 }
 h3{
-    @include font-style( 1.5rem, #000, $font-weight: 400); 
+    @include font-style( 1.5rem, $font-color1, $font-weight: 400); 
 }
